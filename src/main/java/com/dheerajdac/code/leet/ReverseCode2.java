@@ -1,4 +1,4 @@
-package leet;
+package com.dheerajdac.code.leet;
 
 public class ReverseCode2 {
 

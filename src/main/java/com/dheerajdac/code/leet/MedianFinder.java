@@ -1,4 +1,4 @@
-package leet;
+package com.dheerajdac.code.leet;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
