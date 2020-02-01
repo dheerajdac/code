@@ -1,7 +1,6 @@
 package com.dheerajdac.code.leet;
 
 import java.util.*;
-import java.util.function.Function;
 
 public class MinimumHeight {
 
