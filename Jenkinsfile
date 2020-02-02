@@ -1,7 +1,8 @@
 pipeline {
 
     environment {
-     }
+        test : 'test'
+    }
 
     agent {
         docker {
