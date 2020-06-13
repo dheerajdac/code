@@ -1,7 +1,5 @@
 package com.dheerajdac.code.geeksForGeeks;
 
-import java.util.Arrays;
-
 public class KMP {
 
     public void searchPattern(String str, String pre){

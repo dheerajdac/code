@@ -8,7 +8,6 @@ public class MergeSortedArray {
         if(n ==0 ){
             return;
         }
-        int length = m + n;
         int i =0;
         int x= 0;
         while (i < m){

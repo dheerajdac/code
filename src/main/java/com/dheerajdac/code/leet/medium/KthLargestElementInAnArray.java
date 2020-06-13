@@ -1,7 +1,5 @@
 package com.dheerajdac.code.leet.medium;
 
-import com.dheerajdac.code.tree.Tree;
-
 import java.util.*;
 
 public class KthLargestElementInAnArray {

@@ -33,10 +33,6 @@ public class AddBinary {
         return result;
     }
 
-    private String add(String a, String b) {
-       return "";
-    }
-
     public char addBits(char a, char b, StringBuilder stringBuilder, int i) {
         if(a == '0' && b =='0'){
             stringBuilder.replace(i, i+1, "0");

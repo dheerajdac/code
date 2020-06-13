@@ -1,6 +1,5 @@
 package com.dheerajdac.code.leet.medium;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class KthSmallestElementInASortedMatrix {
@@ -23,7 +22,6 @@ public class KthSmallestElementInASortedMatrix {
     }
 
     public int kthSmallest(int[][] matrix, int k) {
-        int length = matrix.length;
 
         PriorityQueue<Node> heap = new PriorityQueue<>();
 

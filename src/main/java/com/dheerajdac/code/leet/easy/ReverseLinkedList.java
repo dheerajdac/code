@@ -5,7 +5,6 @@ import com.dheerajdac.code.leet.ListNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class ReverseLinkedList {
 

@@ -36,5 +36,6 @@ public class log {
             }
             System.out.println(i);
         }
+        sc.close();
     }
 }

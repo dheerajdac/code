@@ -1,7 +1,5 @@
 package com.dheerajdac.code.leet.easy;
 
-import java.util.Arrays;
-
 public class RotateArray {
 
     public void reverse(int[] nums, int start, int end){

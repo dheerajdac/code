@@ -82,7 +82,6 @@ public class Array3 {
             }
         }
 
-        Set<Map.Entry<Integer, Boolean>> entries = map.entrySet();
         List<Integer> list = new ArrayList<>();
         for(Integer a : A){
             if(map.get(a) == true){

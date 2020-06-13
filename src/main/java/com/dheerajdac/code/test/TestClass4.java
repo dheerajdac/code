@@ -91,6 +91,7 @@ class TestClass4 {
             --no;
             System.out.printf("%.6f\n", time);
         }
+        s.close();
 
     }
 

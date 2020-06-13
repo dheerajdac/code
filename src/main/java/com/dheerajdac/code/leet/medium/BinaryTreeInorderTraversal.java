@@ -1,6 +1,5 @@
 package com.dheerajdac.code.leet.medium;
 
-import com.dheerajdac.code.leet.ListNode;
 import com.dheerajdac.code.leet.TreeNode;
 
 import java.util.ArrayList;

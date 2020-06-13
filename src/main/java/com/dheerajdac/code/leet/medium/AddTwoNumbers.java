@@ -65,7 +65,7 @@ public class AddTwoNumbers {
         ListNode node6 = new ListNode(4);
 
         node4.next = node5;
-        //node5.next = node6;
+        node5.next = node6;
 
         AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
         ListNode node = addTwoNumbers.addTwoNumbers(node1, node4);

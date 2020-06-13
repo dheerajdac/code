@@ -47,6 +47,7 @@ public class compres {
             }
         }
         System.out.println(ans.toString());
+        sc.close();
     }
 
 }

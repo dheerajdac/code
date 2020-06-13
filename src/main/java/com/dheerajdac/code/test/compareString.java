@@ -68,7 +68,6 @@ public class compareString {
             }
         } else {
             for (int i = 0; i < q; i++) {
-                int index = mc.nextInt();
                 System.out.println("YES");
             }
         }

@@ -30,7 +30,6 @@ public class decompress {
                 else
                     out.append(s.substring(i, length));
                 int temp = 0;
-                int shift = 0;
                 int j = window;
                 for (j = i + window; j < length; j++) {
                     if (Character.digit(s.charAt(j), 10) < 0)

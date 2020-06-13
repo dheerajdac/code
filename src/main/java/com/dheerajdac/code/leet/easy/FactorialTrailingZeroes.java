@@ -1,8 +1,4 @@
 package com.dheerajdac.code.leet.easy;
-
-import java.util.HashMap;
-import java.util.Map;
-
 //To Do
 public class FactorialTrailingZeroes {
 

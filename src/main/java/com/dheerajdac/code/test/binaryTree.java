@@ -1,7 +1,5 @@
 package com.dheerajdac.code.test;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 class node {
@@ -38,7 +36,7 @@ public class binaryTree {
     }
 
     private static void dfs(binaryTree tree) {
-        Stack stack = new Stack<node>();
+        Stack<node> stack = new Stack<node>();
         stack.push(tree.root);
         while (!stack.empty()) {
             node temp = (node) stack.pop();
@@ -50,11 +48,6 @@ public class binaryTree {
         }
     }
 
-    private static void bfs(binaryTree tree){
-        Queue<node> queue = new LinkedList<>();
-
-
-    }
 
 
     private static void traverse(node node) {

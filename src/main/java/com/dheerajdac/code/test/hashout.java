@@ -76,6 +76,7 @@ public class hashout {
         }
         out.flush();
         out.close();
+        s.close();
     }
 }
 

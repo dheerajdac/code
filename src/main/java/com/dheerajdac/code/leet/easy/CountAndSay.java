@@ -7,7 +7,6 @@ public class CountAndSay {
 
     public String generate(String value){
         StringBuilder result = new StringBuilder();
-        char last = 'q';
         int i =0;
         while (i < value.length()) {
             int times = 0;

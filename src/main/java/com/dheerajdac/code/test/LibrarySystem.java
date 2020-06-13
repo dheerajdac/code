@@ -99,12 +99,10 @@ interface Admin{
 
 class AdminImpl implements Admin,Observer{
 
-    private String name;
     private Subject topic;
     private List<User> pendingUser;
 
     public AdminImpl(String nm){
-        this.name=nm;
         pendingUser = new LinkedList<>();
     }
     @Override

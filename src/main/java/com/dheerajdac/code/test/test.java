@@ -30,7 +30,7 @@ class Sub extends Super
 
 
     static String solution(int[] array) {
-        List<Integer> l1 = new ArrayList();
+        List<Integer> l1 = new ArrayList<>();
         for(int i=0; i< array.length; i++ ){
             l1.add(array[i]);
         }
@@ -50,7 +50,6 @@ class Sub extends Super
 
     public static void main(String args[])
     {
-        int[] a = new int[]{1,2};
 
 
         Sub sub = new Sub("Hello");

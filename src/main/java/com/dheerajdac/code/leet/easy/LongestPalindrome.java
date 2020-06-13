@@ -7,8 +7,6 @@ longest-palindrome
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiConsumer;
-
 public class LongestPalindrome {
     public int longestPalindrome(String s) {
         Map<Character, Integer > map = new HashMap<>(52);

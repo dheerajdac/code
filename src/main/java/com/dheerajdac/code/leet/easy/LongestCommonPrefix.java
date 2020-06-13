@@ -3,9 +3,6 @@ package com.dheerajdac.code.leet.easy;
 /longest-common-prefix
 */
 
-import org.omg.PortableInterceptor.INACTIVE;
-
-import java.util.Queue;
 
 public class LongestCommonPrefix {
 

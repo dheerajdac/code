@@ -19,7 +19,6 @@ public class Main
         int temp=0;
         for(String input: inputs){
             int M = input.length();
-            int N = input.length();
             int i, j;
             int p = 0; // hash value for pattern
             int t = 0; // hash value for txt

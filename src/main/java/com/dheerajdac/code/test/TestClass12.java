@@ -63,6 +63,7 @@ class TestClass12 {
             no--;
             System.out.println(ans);
         }
+        s.close();
 
     }
 

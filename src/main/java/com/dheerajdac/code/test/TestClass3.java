@@ -78,6 +78,7 @@ class TestClass3 {
             System.out.println((long)((ans*temp)%v));
             no--;
         }
+        s.close();
 
     }
 
