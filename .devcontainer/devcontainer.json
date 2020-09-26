@@ -6,12 +6,7 @@
 		"dockerfile": "Dockerfile",
 		"args": {
 			// Update the VARIANT arg to pick a Java version: 11, 14
-			"VARIANT": "14",
-			// Options
-			"INSTALL_MAVEN": "true",
-			"INSTALL_GRADLE": "false",
-			"INSTALL_NODE": "false",
-			"NODE_VERSION": "lts/*"
+			"VARIANT": "1"
 		}
 	},
 
@@ -20,15 +15,13 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"java.home": "/docker-java-home",
-		"maven.executable.path": "/usr/local/sdkman/candidates/maven/current/bin/mvn"
+		"maven.executable.path": "/usr/lib/mvn",
+		"java.home": "/opt/java/openjdk",
 	},
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"vscjava.vscode-java-pack",
-		"gabrielbb.vscode-lombok",
-		"pivotal.vscode-spring-boot"
+		"vscjava.vscode-java-debug"
 	],
 
 	"remoteEnv": { "LOCAL_USER_PATH": "${localEnv:HOME}${localEnv:USERPROFILE}" },
@@ -38,7 +31,7 @@
 
 	"postCreateCommand": "java -version",
 
-	"remoteUser": "vscode"
+	"remoteUser": "root"
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
 
