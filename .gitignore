@@ -9,3 +9,4 @@ code.iml
 .devcontainer/.ssh/id_rsa
 .devcontainer/.ssh/id_rsa.pub
 .devcontainer/.ssh/known_hosts
+*.class

@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+    java11:
+        image: dheerajdac/ubuntu:java-11
+        container_name: code
+        command: sleep 600
+        volumes:
+            - "~/.m2/repository:/root/.m2/repositry"
+            - type: bind
+              source: ./
+              target: /workspace
+
+
