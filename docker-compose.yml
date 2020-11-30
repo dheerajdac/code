@@ -5,6 +5,8 @@ services:
         container_name: code
         command: sleep 600
         volumes:
+            - "~/.ssh/:/root/.ssh"
+            - "~/.gitconfig:/root/.gitconfig"
             - "~/.m2/repository:/root/.m2/repositry"
             - type: bind
               source: ./
