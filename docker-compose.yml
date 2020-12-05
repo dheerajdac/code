@@ -3,7 +3,7 @@ services:
     java11:
         image: dheerajdac/ubuntu:java-11
         container_name: code
-        command: sleep 600
+        command: sleep 60000
         volumes:
             - "~/.ssh/:/root/.ssh"
             - "~/.gitconfig:/root/.gitconfig"
