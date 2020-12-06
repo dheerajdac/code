@@ -12,7 +12,7 @@ public class NumberOfStepsToZero {
 
         while(num != 0) {
             result++;
-            if(num & 1 == 1){
+            if((num & 1) == 1){
                 num -= 1;
             } else {
                 num >>= 1;
