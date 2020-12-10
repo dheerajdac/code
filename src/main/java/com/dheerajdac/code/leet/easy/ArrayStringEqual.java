@@ -1,11 +1,5 @@
 package com.dheerajdac.code.leet.easy;
 
-import java.util.HashMap;
-import java.util.Map;
-
-/*
-/two-sum/
-*/
 public class ArrayStringEqual {
 
     
