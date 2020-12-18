@@ -1,32 +1,27 @@
 package com.dheerajdac.code.leet.easy;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-/*
-/two-sum/
-*/
-public class TwoSum {
+public class OrderedStream {
 
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer,Integer> map = new HashMap<>(nums.length);
-        int[] result = new int[2];
-        for (int i = 0; i < nums.length; i++) {
-            if(map.get(target - nums[i]) != null){
-                result[0] = map.get(target - nums[i]);
-                result[1] = i;
-                break;
-            }
-            map.put(nums[i],i);
+    int ptr = 0;
+
+    String[] arr;
+
+    public OrderedStream(int n) {
+        arr = new String[n];
+    }
+
+    public List<String> insert(int id, String value) {
+        arr[id-1] = value;
+        
+        List<String> result = new ArrayList<String>();
+
+        while(ptr < arr.length && arr[ptr] != null && !arr[ptr].isEmpty()) {
+            result.add(arr[ptr]);    
+            ptr++;
         }
+
         return result;
     }
-
-    public static void main(String[] args) {
-        TwoSum twoSum = new TwoSum();
-        int[] arr = {2, 7, 11, 15};
-        int[] result = twoSum.twoSum(arr,9);
-        System.out.println(result[0] +  "  " + result[1]);
-    }
-
 }
