@@ -8,7 +8,7 @@ public class DiagonalSum {
         int result = 0;
 
         for(int i = 0; i < length; i++){
-            result = mat[i][i] + mat[i][length-i -1];
+            result = result + mat[i][i] + mat[i][length-i -1];
         }
 
         if(length % 2 == 1){
