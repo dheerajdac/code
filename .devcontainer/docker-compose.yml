@@ -24,7 +24,7 @@ services:
 
     # Overrides default command so things don't shut down after the process ends.
     #entrypoint: /usr/local/share/docker-init.sh
-    command: sleep 600000 
+    command: sleep infinity 
 
     # Uncomment the next four lines if you will use a ptrace-based debuggers like C++, Go, and Rust.
     # cap_add:

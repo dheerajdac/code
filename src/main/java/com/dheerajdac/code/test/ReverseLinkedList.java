@@ -61,6 +61,15 @@ public class ReverseLinkedList {
     }
 
 
+static class Node{
+    public int value;
+    public Node next = null;
+
+    public Node(int value, Node next){
+        this.value = value;
+        this.next = next;
+    }
+}
 
 
 
@@ -93,14 +102,4 @@ public class ReverseLinkedList {
         linkedList.print();
     }
 
-}
-
-class Node{
-    public int value;
-    public Node next = null;
-
-    public Node(int value, Node next){
-        this.value = value;
-        this.next = next;
-    }
 }
