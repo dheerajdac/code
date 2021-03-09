@@ -117,7 +117,6 @@ public class Main
                     p = (p+q);
         }
 
-        boolean flag =false;
         // Slide the pattern over text one by one
         for (i = 0; i <= N - M; i++)
         {
@@ -132,9 +131,6 @@ public class Main
                         break;
                 }
 
-                // if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
-                if (j == M)
-                    flag = true;
             }
 
             // Calculate hash value for next window of text: Remove

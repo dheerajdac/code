@@ -1,6 +1,5 @@
 package com.dheerajdac.code.leet.easy;
 
-import java.util.*;
 
 public class RunningSumOf1DArray {
 

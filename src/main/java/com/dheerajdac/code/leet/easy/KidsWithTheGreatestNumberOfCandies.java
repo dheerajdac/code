@@ -1,23 +1,9 @@
+package com.dheerajdac.code.leet.easy;
 
 import java.util.*;
 
 
 public class KidsWithTheGreatestNumberOfCandies{
-
-	private class Kid implements Comparable<Kid>{
-		int index;
-		int candies;
-
-		Kid(int index, int candles){
-			this.index = index;
-			this.candies = candies;
-		}
-
-
-		public int compareTo(Kid k){
-			return this.candies - k.candies;
-		}
-	}
 
 	public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 		List<Boolean> result = new ArrayList<>();

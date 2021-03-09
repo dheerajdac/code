@@ -1,7 +1,5 @@
 package com.dheerajdac.code.leet.easy;
 
-import java.util.*;
-
 public class SortString {
 
     public String sortString(String s){

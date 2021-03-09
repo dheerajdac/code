@@ -23,7 +23,7 @@ public class NumberOfGoodPairs {
 
     public int hashAndCount(int[] nums) {
         int result = 0;
-        Map<Integer, Integer> map = new HashMap();
+        Map<Integer, Integer> map = new HashMap<>();
 
         for(int i =0; i<nums.length; i++){
             if(map.get(nums[i]) != null){

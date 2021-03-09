@@ -9,6 +9,6 @@ public class DiefangingAnIpAddress {
 
     public static void main(String[] args) {
         DiefangingAnIpAddress obj = new DiefangingAnIpAddress();
-        System.out.println("1.1.1.1");
+        System.out.println(obj.defangIPaddr("1.1.1.1"));
     }
 }

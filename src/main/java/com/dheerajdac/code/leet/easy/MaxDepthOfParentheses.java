@@ -1,7 +1,5 @@
 package com.dheerajdac.code.leet.easy;
 
-import java.util.*;
-
 public class MaxDepthOfParentheses{
 
     public int maxDepth(String s) {
