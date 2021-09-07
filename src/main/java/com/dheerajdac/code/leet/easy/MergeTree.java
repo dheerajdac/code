@@ -19,13 +19,6 @@ public class MergeTree {
         return root;
 
     }
-private class TreeNode {
-
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-}
 }
 
 
