@@ -15,7 +15,7 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
+		"java.home": "/opt/java/openjdk/",
 		"maven.executable.path": "/usr/bin/mvn"
 	},
 
