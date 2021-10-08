@@ -1,12 +1,12 @@
 
-
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.Array;
 
+public class Apartments {
+    
 
-public class AppleDivison{
-
-	ModReader reader = new ModReader();
+    ModReader reader = new ModReader();
 	ModWriter writer = new ModWriter();
 
 	private class ModReader {
@@ -77,50 +77,54 @@ public class AppleDivison{
 
 	}
 
-	public void solve1() throws Exception{
-		int n = reader.nextInt();
-		int[] arr = reader.nextIntArray(n);
+	private void print(Object obj){
+		try {
+			writer.print(obj);
+		} catch(Exception ex){
 
+		}
+	}
+
+	private void println(Object obj){
+		try {
+			writer.println(obj);
+		} catch (Exception e) {
+			//TODO: handle exception
+		}
+	}
+
+    public void solve() throws Exception {
+        int n = reader.nextInt();
+		int m = reader.nextInt();
+		int k = reader.nextInt();
+
+        int[] arr = reader.nextIntArray(n);
+		int[] app = reader.nextIntArray(m);
+
+		int i =0;
+		int j =0;
+		int result =0;
 		Arrays.sort(arr);
-
-		int sum1 = 0;
-		int sum2 = 0;
-		for(int i = arr.length-1 ; i >= 0 ; i--){
-			if(sum1 > sum2){
-				sum2 += arr[i];
+		Arrays.sort(app);
+		while( i < arr.length && j < app.length){
+			//println( arr[i] + "  " + app[j]);
+			if(arr[i] >= app[j] - k && arr[i] <= app[j]+k){
+				result++;
+				i++;
+				j++;
 			} else {
-				sum1 +=arr[i];
+				if(arr[i] < app[j]){
+					i++;
+				} else {
+					j++;
+				}
 			}
 		}
-		writer.print(Math.abs(sum1-sum2));
-	}
+        writer.println(result);
+    }
 
-	public long recur(int[] arr, int i, long sum, long tSum){
-		if(i == arr.length){
-			return sum;
-		}
-		long first = recur(arr, i+1, sum + arr[i],tSum);
-		long second = recur(arr, i+1, sum, tSum);
-
-		long sum1 = Math.abs((tSum-first) -first);
-		long sum2 = Math.abs((tSum-second) -second);
-
-		return sum1 < sum2 ? first : second;
-	}
-
-	public void solve() throws Exception {
-		int n = reader.nextInt();
-		int[] arr = reader.nextIntArray(n);
-		long tSum = 0;
-		for(int num : arr){
-			tSum += num;
-		}
-		long sum = recur(arr, 0,0,tSum);
-		writer.print( Math.abs((tSum -sum) -sum));
-	}
-
-	public static void main(String[] args) throws Exception{
-		AppleDivison obj = new AppleDivison();
+    public static void main(String[] args) throws Exception{
+		Apartments obj = new Apartments();
 		obj.solve();
 		obj.writer.close();
 	}

@@ -1,12 +1,12 @@
-
+package com.dheerajdac.code.cses.SortingAndSearching;
 
 import java.util.*;
 import java.io.*;
 
+public class DistinctNumbers {
+    
 
-public class AppleDivison{
-
-	ModReader reader = new ModReader();
+    ModReader reader = new ModReader();
 	ModWriter writer = new ModWriter();
 
 	private class ModReader {
@@ -77,50 +77,37 @@ public class AppleDivison{
 
 	}
 
-	public void solve1() throws Exception{
-		int n = reader.nextInt();
-		int[] arr = reader.nextIntArray(n);
+	private void print(Object obj){
+		try {
+			writer.print(obj);
+		} catch(Exception ex){
 
-		Arrays.sort(arr);
-
-		int sum1 = 0;
-		int sum2 = 0;
-		for(int i = arr.length-1 ; i >= 0 ; i--){
-			if(sum1 > sum2){
-				sum2 += arr[i];
-			} else {
-				sum1 +=arr[i];
-			}
 		}
-		writer.print(Math.abs(sum1-sum2));
 	}
 
-	public long recur(int[] arr, int i, long sum, long tSum){
-		if(i == arr.length){
-			return sum;
+	private void println(Object obj){
+		try {
+			writer.println(obj);
+		} catch (Exception e) {
+			//TODO: handle exception
 		}
-		long first = recur(arr, i+1, sum + arr[i],tSum);
-		long second = recur(arr, i+1, sum, tSum);
-
-		long sum1 = Math.abs((tSum-first) -first);
-		long sum2 = Math.abs((tSum-second) -second);
-
-		return sum1 < sum2 ? first : second;
 	}
 
-	public void solve() throws Exception {
-		int n = reader.nextInt();
-		int[] arr = reader.nextIntArray(n);
-		long tSum = 0;
-		for(int num : arr){
-			tSum += num;
-		}
-		long sum = recur(arr, 0,0,tSum);
-		writer.print( Math.abs((tSum -sum) -sum));
-	}
+    public void solve() throws Exception {
+        int n = reader.nextInt();
+        int[] arr = reader.nextIntArray(n);
 
-	public static void main(String[] args) throws Exception{
-		AppleDivison obj = new AppleDivison();
+        Set<Integer> set = new HashSet<>();
+
+        for(int num : arr){
+            set.add(num);
+        }
+
+        writer.println(set.size());
+    }
+
+    public static void main(String[] args) throws Exception{
+		DistinctNumbers obj = new DistinctNumbers();
 		obj.solve();
 		obj.writer.close();
 	}
