@@ -1,10 +1,12 @@
-package com.dheerajdac.code.cses.introductory;
+package com.dheerajdac.code.cses.SortingAndSearching;
 
 
 import java.util.*;
 import java.io.*;
 
-public class CreatingString{
+public class RestaurantCustomers {
+
+
 	ModReader reader = new ModReader();
 	ModWriter writer = new ModWriter();
 
@@ -40,14 +42,12 @@ public class CreatingString{
 			return nextToken().split(" ");
 		}
 
-		int[] nextIntArray() throws Exception {
-			String[] input = nextToken().split(" ");
-			int[] result = new int[input.length];
+		int[] nextIntArray(int n) throws Exception {
+			int[] result = new int[n];
 
-			for(int i = 0 ; i < input.length; i++){
-				result[i] = Integer.valueOf(input[i]);
+			for(int i = 0 ; i < n; i++){
+				result[i] = Integer.valueOf(nextToken());
 			}
-
 			return result;
 		}
 	}
@@ -78,44 +78,69 @@ public class CreatingString{
 
 	}
 
-	public String swap(String str, int i, int j){
-		char[] arr = str.toCharArray();
-		char temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-		return String.valueOf(arr);
-	}
+	private void print(Object obj){
+		try {
+			writer.print(obj);
+		} catch(Exception ex){
 
-	public void permutate(String str, int start, int end, Set<String> set){
-
-		if(start == end-1){
-			set.add(str);
-		}
-
-		for(int i = start; i < end; i++){
-			permutate(swap(str,i, start), start+1, end, set);
 		}
 	}
+
+	private void println(Object obj){
+		try {
+			writer.println(obj);
+		} catch (Exception e) {
+			//TODO: handle exception
+		}
+	}
+
+	private class TempObj implements Comparable<TempObj>{
+		int val;
+		boolean flag;
+
+		@Override
+		public int compareTo(TempObj o) {
+			return this.val - o.val;
+		}
+	} 
 
 	public void solve() throws Exception {
-		String str = reader.nextToken();
-		Set<String> result = new HashSet<>();
-		permutate(str, 0, str.length(), result);
-		
-		writer.println(result.size());
+		int n = reader.nextInt();
+		List<TempObj> list = new ArrayList<>();
 
-		List<String> list = new ArrayList<>(result);
+		for(int i = 0 ; i < n; i++){
+			TempObj obj = new TempObj();
+			obj.val = reader.nextInt();
+			obj.flag = true;
+
+			TempObj obj1 = new TempObj();
+			obj1.val = reader.nextInt();
+			obj1.flag = false;
+
+			list.add(obj);
+			list.add(obj1);
+		}
+
 		Collections.sort(list);
 
-		for(String temp : list){
-			writer.println(temp);
+		int result = 0;
+		int max = 0;
+
+		for(TempObj obj : list){
+			if(obj.flag){
+				result++;
+				if(max < result){
+					max =result;
+				}
+			} else {
+				result--;
+			}
 		}
-	}
-
-
-
+		print(max);
+	    }
+	
 	public static void main(String[] args) throws Exception{
-		CreatingString obj = new CreatingString();
+		RestaurantCustomers obj = new RestaurantCustomers();
 		obj.solve();
 		obj.writer.close();
 	}

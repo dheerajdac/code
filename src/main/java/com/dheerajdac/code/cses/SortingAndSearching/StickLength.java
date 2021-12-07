@@ -1,10 +1,11 @@
-package com.dheerajdac.code.cses.introductory;
-
+package com.dheerajdac.code.cses.SortingAndSearching;
 
 import java.util.*;
 import java.io.*;
 
-public class CreatingString{
+public class StickLength {
+
+
 	ModReader reader = new ModReader();
 	ModWriter writer = new ModWriter();
 
@@ -40,14 +41,12 @@ public class CreatingString{
 			return nextToken().split(" ");
 		}
 
-		int[] nextIntArray() throws Exception {
-			String[] input = nextToken().split(" ");
-			int[] result = new int[input.length];
+		int[] nextIntArray(int n) throws Exception {
+			int[] result = new int[n];
 
-			for(int i = 0 ; i < input.length; i++){
-				result[i] = Integer.valueOf(input[i]);
+			for(int i = 0 ; i < n; i++){
+				result[i] = Integer.valueOf(nextToken());
 			}
-
 			return result;
 		}
 	}
@@ -78,45 +77,46 @@ public class CreatingString{
 
 	}
 
-	public String swap(String str, int i, int j){
-		char[] arr = str.toCharArray();
-		char temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-		return String.valueOf(arr);
-	}
+	private void print(Object obj){
+		try {
+			writer.print(obj);
+		} catch(Exception ex){
 
-	public void permutate(String str, int start, int end, Set<String> set){
-
-		if(start == end-1){
-			set.add(str);
-		}
-
-		for(int i = start; i < end; i++){
-			permutate(swap(str,i, start), start+1, end, set);
 		}
 	}
+
+	private void println(Object obj){
+		try {
+			writer.println(obj);
+		} catch (Exception e) {
+			//TODO: handle exception
+		}
+	}
+
 
 	public void solve() throws Exception {
-		String str = reader.nextToken();
-		Set<String> result = new HashSet<>();
-		permutate(str, 0, str.length(), result);
-		
-		writer.println(result.size());
+		int n = reader.nextInt();
+		int[] arr = reader.nextIntArray(n);
 
-		List<String> list = new ArrayList<>(result);
-		Collections.sort(list);
+		Arrays.sort(arr);
 
-		for(String temp : list){
-			writer.println(temp);
+		int median = arr[n/2];
+
+		long result = 0;
+
+		for(int i : arr){
+			result += Math.abs(median-i);
 		}
+
+		writer.print(result);
+		writer.flush();
 	}
 
-
-
 	public static void main(String[] args) throws Exception{
-		CreatingString obj = new CreatingString();
+
+		StickLength obj = new StickLength();
 		obj.solve();
 		obj.writer.close();
 	}
+	
 }

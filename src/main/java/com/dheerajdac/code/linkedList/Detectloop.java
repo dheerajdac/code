@@ -1,5 +1,6 @@
 package com.dheerajdac.code.linkedList;
 
+
 public class Detectloop {
 
     public static class Node {
@@ -47,7 +48,6 @@ public class Detectloop {
         Node fifth = new Node(6);
         forth.next = fifth;
         fifth.next = second;
-        detectoop(root);
 
 
     }

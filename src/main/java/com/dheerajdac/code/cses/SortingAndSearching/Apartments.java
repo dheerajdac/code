@@ -1,7 +1,8 @@
+package com.dheerajdac.code.cses.SortingAndSearching;
+
 
 import java.util.*;
 import java.io.*;
-import java.lang.reflect.Array;
 
 public class Apartments {
     
